@@ -8,6 +8,7 @@ public class Date extends Object{
     private int year;
     //constructor that takes three int values as input: a day, a month and a year,and it sets the date appropriately.
     public Date(int day, int month, int year){
+
     /*default seeting: the range of month is 1-12, the input of month that outside
     the range will be complie to the
     * closet month of the input*/
@@ -21,26 +22,28 @@ public class Date extends Object{
     }
     else
     this.month = month;
+
     /*defaul setting, if the input day ouside the range of day in the month,
     compile to the closet day in the month*/
     if (day < 1){
-    this.day = 1;
+        this.day = 1;
     }
     else if (day > daysPerMonth(this.month)){
-    this.day = daysPerMonth(this.month);
+        this.day = daysPerMonth(this.month);
     }
     else
-    this.day = day;
+        this.day = day;
+
     /*dedault setting: if the input year is surpast the range from 1800 to 2200,
     * complie to the closeest year in the range*/
     if (year < 1800){
-    this.year = 1800;
+        this.year = 1800;
     }
     else if (year > 2200){
-    this.year = 2200;
+        this.year = 2200;
     }
     else
-    this.year = year;
+        this.year = year;
     }
     // a class method that takes the month as input and return the maximum days of that month as output
     public static int daysPerMonth (int month){
